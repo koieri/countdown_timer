@@ -48,6 +48,7 @@
     sec = 0;
     clearInterval(intervalId);
     timer.textContent = '00:00';
+    message.textContent = ' '
   }
 
   function countDown(){
