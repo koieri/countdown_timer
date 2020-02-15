@@ -6,10 +6,19 @@
   const reset = document.getElementById('reset');
   const settime = document.getElementById('settime');
  
+  let selectedTime;
   let sec;
   let m;
   let s;
   let intervalId;
+
+
+  function selectboxChange(){
+    selectedTime = String(document.getElementById('settime').value).padStart(2, '0');
+    timer.textContent = `${selectedTime}:00`;
+    start.classList.remove('inactive');
+  }
+
 
   function startTimer(){
     if (start.classList.contains('inactive') === true) {
@@ -55,7 +64,8 @@
 
   function setButtonStateInitial() {
     settime.disabled = false;
-    start.classList.remove('inactive');
+    settime.selectedIndex = 0;
+    start.classList.add('inactive');
     stop.classList.add('inactive');
     reset.classList.add('inactive');
   }
@@ -73,6 +83,5 @@
     stop.classList.add('inactive');
     reset.classList.remove('inactive');
   }
-
 
 }

@@ -10,8 +10,8 @@
     <div id="timer">00:00</div>
     <div id="message"></div>
 
-    <select id="settime">
-      <!-- <option value="0.5">テスト用</option> -->
+    <select id="settime" onchange="selectboxChange();">
+      <option disabled selected value>何食べる？</option>
       <option value="3">日清 カップヌードル</option>
       <option value="3">日清 チキンラーメン</option>
       <option value="3">日清 どん兵衛天ぷらそば</option>
@@ -28,7 +28,7 @@
     </select>
 
     <div id="control">
-      <input type="button" value="Start" id="start" class="btn" onclick="startTimer();">
+      <input type="button" value="Start" id="start" class="btn inactive" onclick="startTimer();">
       <input type="button" value="Stop" id="stop" class="btn inactive" onclick="stopTimer();">
       <input type="button" value="Reset" id="reset" class="btn inactive" onclick="resetTimer();">
     </div>
