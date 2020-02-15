@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="timer">00:00</div>
+    <div id="message"></div>
+
+    <select id="settime">
+      <!-- <option value="0.5">テスト用</option> -->
+      <option value="3">日清 カップヌードル</option>
+      <option value="3">日清 チキンラーメン</option>
+      <option value="3">日清 どん兵衛天ぷらそば</option>
+      <option value="5">日清 どん兵衛きつねうどん</option>
+      <option value="5">日清 ラ王</option>
+      <option value="4">日清 麺職人</option>
+      <option value="5">マルちゃん正麺</option>
+      <option value="5">マルちゃん 赤いきつね</option>
+      <option value="3">マルちゃん 緑のたぬき</option>
+      <option value="3">サッポロ一番 カップスター</option>
+      <option value="3">ペヤング ソースやきそば</option>
+      <option value="3">明星 一平ちゃん</option>
+      <option value="3">NONGSHIM 辛ラーメン</option>
+    </select>
+
+    <div id="control">
+      <input type="button" value="Start" class="btn" onclick="startTimer();">
+      <input type="button" value="Stop" class="btn" onclick="stopTimer();">
+      <input type="button" value="Reset" class="btn last" onclick="resetTimer();">
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
