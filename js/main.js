@@ -32,14 +32,6 @@
     },1000);
   }
 
-  function stopTimer(){
-    if (stop.classList.contains('inactive') === true) {
-      return;
-    }
-    setButtonStateStopped();
-    clearInterval(intervalId);
-  }
-
   function resetTimer(){
     if (reset.classList.contains('inactive') === true) {
       return;
@@ -76,12 +68,4 @@
     start.classList.add('inactive');
     reset.classList.remove('inactive');
   }
-
-  // function setButtonStateStopped() {
-  //   settime.disabled = true;
-  //   start.classList.remove('inactive');
-  //   stop.classList.add('inactive');
-  //   reset.classList.remove('inactive');
-  // }
-
 }
