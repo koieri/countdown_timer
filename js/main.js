@@ -3,7 +3,8 @@
   const timer = document.getElementById('timer');
   const start = document.getElementById('start');
   const stop = document.getElementById('stop');
-  const restart = document.getElementById('restart');
+  const reset = document.getElementById('reset');
+  const settime = document.getElementById('settime');
  
   let sec;
   let m;
@@ -11,17 +12,30 @@
   let intervalId;
 
   function startTimer(){
-    sec = Number(document.getElementById("settime").value) * 60;
+    if (start.classList.contains('inactive') === true) {
+       return;
+    }
+
+    sec = Number(document.getElementById('settime').value) * 60;
+    setButtonStateRunning();
     intervalId = setInterval(() => {
       countDown();
     },1000);
   }
 
   function stopTimer(){
+    if (stop.classList.contains('inactive') === true) {
+      return;
+    }
+    setButtonStateStopped();
     clearInterval(intervalId);
   }
 
   function resetTimer(){
+    if (reset.classList.contains('inactive') === true) {
+      return;
+    }
+    setButtonStateInitial();
     sec = 0;
     clearInterval(intervalId);
     timer.textContent = '00:00';
@@ -39,6 +53,26 @@
     }
   }
 
+  function setButtonStateInitial() {
+    settime.disabled = false;
+    start.classList.remove('inactive');
+    stop.classList.add('inactive');
+    reset.classList.add('inactive');
+  }
+
+  function setButtonStateRunning() {
+    settime.disabled = true;
+    start.classList.add('inactive');
+    stop.classList.remove('inactive');
+    reset.classList.add('inactive');
+  }
+
+  function setButtonStateStopped() {
+    settime.disabled = true;
+    start.classList.remove('inactive');
+    stop.classList.add('inactive');
+    reset.classList.remove('inactive');
+  }
 
 
 }
