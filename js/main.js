@@ -66,22 +66,21 @@
     settime.disabled = false;
     settime.selectedIndex = 0;
     start.classList.add('inactive');
-    stop.classList.add('inactive');
+    // stop.classList.add('inactive');
     reset.classList.add('inactive');
   }
 
   function setButtonStateRunning() {
     settime.disabled = true;
     start.classList.add('inactive');
-    stop.classList.remove('inactive');
-    reset.classList.add('inactive');
-  }
-
-  function setButtonStateStopped() {
-    settime.disabled = true;
-    start.classList.remove('inactive');
-    stop.classList.add('inactive');
     reset.classList.remove('inactive');
   }
+
+  // function setButtonStateStopped() {
+  //   settime.disabled = true;
+  //   start.classList.remove('inactive');
+  //   stop.classList.add('inactive');
+  //   reset.classList.remove('inactive');
+  // }
 
 }
