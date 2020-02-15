@@ -55,6 +55,13 @@ body{
   padding: 100px 0;
 }
 
+h1{
+  font-size: 16px;
+  font-weight: bold;
+  color: #c9171e;
+  text-align: center;
+}
+
 .container{
   width: 360px;
   height: 250px;
@@ -82,7 +89,7 @@ body{
   line-height: 40px;
   font-size: 16px;
   font-weight: bold;
-  color: #b7282e;
+  color: #c9171e;
 }
 
 #settime{
