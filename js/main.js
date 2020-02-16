@@ -54,7 +54,7 @@
       Push.create("アラーム", {  
         body: "ラーメンが出来上がりました！",  
         icon: 'img/ramen.png', 
-        timeout: 5000,
+        timeout: 8000,
         vibrate:[200, 100],
         onClick: function () {
           window.focus();
